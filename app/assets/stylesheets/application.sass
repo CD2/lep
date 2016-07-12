@@ -7,9 +7,11 @@
 
 
 #page_wrapper
-  padding-top: 106px
-  max-width: 1200px
+  padding: 30px 30px 140px
+  max-width: 1000px
   margin: 0 auto
+  .panel
+    width: 100%
 
 input[type="text"], input[type="password"], input[type="email"], select
   height: 50px
@@ -17,8 +19,8 @@ input[type="text"], input[type="password"], input[type="email"], select
 
 .field[data-required]
 
-  &.field_with_errors
-    border: 1px solid red
+  &.field_with_errors input
+    border: 1px solid red!important
 
   label:after
     content: '*'
@@ -30,3 +32,60 @@ input[type="text"], input[type="password"], input[type="email"], select
 
   &.current_panel
     display: block
+
+h1
+  font-size: 1.5rem
+  margin-bottom: 0
+
+h2
+  font-size: 1.125rem
+
+.actions
+  a
+    background-color: $primary
+    color: white
+    display: inline-block
+    padding: 16px 40px
+    float: right
+
+.split_form_area
+  +flexbox
+  border: 1px solid #ddd
+  margin: 20px 0
+  .description
+    +flex(1)
+    background-color: #a98fb8
+    padding: 30px
+    color: white
+    h3
+      font-weight: 600
+      font-size: 1rem
+      color: white
+    li
+      list-style: initial
+  .main
+    +flex(3)
+    padding: 30px
+    p
+      color: #666
+      margin-bottom: 10px
+  .inline_fields
+    +flexbox
+    .field
+      +flex(1)
+      padding: 5px 10px
+
+div#intro
+  padding: 140px 30px 20px
+  background: #dcdcdc
+  color: white
+
+div#intro h1, div#intro h2
+  line-height: 40px
+
+div#intro_inner
+  max-width: 1000px
+  margin: 0 auto
+
+.margin
+  margin: 8px 0

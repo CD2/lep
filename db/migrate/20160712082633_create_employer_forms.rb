@@ -20,6 +20,7 @@ class CreateEmployerForms < ActiveRecord::Migration[5.0]
       t.integer :work_experience
       t.integer :future_work_experience
       t.integer :enterprise_adviser
+      t.string :logo
 
       t.timestamps
     end

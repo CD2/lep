@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160712082633) do
     t.integer  "work_experience"
     t.integer  "future_work_experience"
     t.integer  "enterprise_adviser"
+    t.string   "logo"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
