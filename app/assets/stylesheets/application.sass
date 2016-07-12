@@ -14,3 +14,19 @@
 input[type="text"], input[type="password"], input[type="email"], select
   height: 50px
   line-height: 50px
+
+.field[data-required]
+
+  &.field_with_errors
+    border: 1px solid red
+
+  label:after
+    content: '*'
+
+.panel
+  margin-bottom: 30px
+  display: none
+  width: 756px
+
+  &.current_panel
+    display: block
