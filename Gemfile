@@ -20,6 +20,8 @@ gem 'haml-rails'
 gem 'bcrypt'
 gem 'friendly_id'
 
+gem 'faker'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'better_errors'

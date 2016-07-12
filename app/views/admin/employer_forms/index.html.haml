@@ -1,0 +1,19 @@
+= provide :title, 'Employer Forms'
+
+
+%table.index_table
+
+  %thead
+    %tr
+      %td Name
+      %td Email
+      %td Applied
+
+      %td{colspan: 2}
+  %tbody
+    - @employer_forms.each do |employer_form|
+      %tr
+        %td= employer_form.name
+        %td= employer_form.contact_email
+        %td= "#{time_ago_in_words(employer_form.created_at)} ago"
+        %td= link_to 'View Details', [:admin, employer_form]

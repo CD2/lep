@@ -1,0 +1,64 @@
+= content_for :actions do
+  = link_to 'Delete', [:admin, @employer_form], method: :delete, data: {confirm: 'Are you sure you want to delete this record?'}
+
+%table.show_table
+  %tr
+    %th Name
+    %td= @employer_form.name
+  %tr
+    %th address_one
+    %td= @employer_form.address_one
+  %tr
+    %th address_two
+    %td= @employer_form.address_two
+  %tr
+    %th city
+    %td= @employer_form.city
+  %tr
+    %th county
+    %td= @employer_form.county
+  %tr
+    %th postcode
+    %td= @employer_form.postcode
+  %tr
+    %th sector
+    %td= @employer_form.sector
+  %tr
+    %th number_of_employees
+    %td= @employer_form.number_of_employees
+  %tr
+    %th contact_name
+    %td= @employer_form.contact_name
+  %tr
+    %th contact_role
+    %td= @employer_form.contact_role
+  %tr
+    %th contact_email
+    %td= @employer_form.contact_email
+  %tr
+    %th contact_phone
+    %td= @employer_form.contact_phone
+  %tr
+    %th number_apprentices
+    %td= @employer_form.number_apprentices
+  %tr
+    %th future_number_apprentices
+    %td= @employer_form.future_number_apprentices
+  %tr
+    %th proportion
+    %td= @employer_form.proportion
+  %tr
+    %th future_proportion
+    %td= @employer_form.future_proportion
+  %tr
+    %th work_experience
+    %td= @employer_form.work_experience
+  %tr
+    %th future_work_experience
+    %td= @employer_form.future_work_experience
+  %tr
+    %th enterprise_adviser
+    %td= @employer_form.enterprise_adviser
+  %tr
+    %th logo
+    %td= image_tag(@employer_form.logo)
