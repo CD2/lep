@@ -1,0 +1,76 @@
+= form_for @employer_form do |f|
+  - if @employer_form.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@employer_form.errors.count, "error")} prohibited this employer_form from being saved:"
+      %ul
+        - @employer_form.errors.full_messages.each do |msg|
+          %li= msg
+
+  = field_set_tag 'Organisation' do
+    .field
+      = f.label :name
+      = f.text_field :name
+    .field
+      = f.label :address_one
+      = f.text_field :address_one
+    .field
+      = f.label :address_two
+      = f.text_field :address_two
+    .field
+      = f.label :city
+      = f.text_field :city
+    .field
+      = f.label :county
+      = f.text_field :county
+    .field
+      = f.label :postcode
+      = f.text_field :postcode
+    .field
+      = f.label :sector
+      = f.text_field :sector
+    .field
+      = f.label :number_of_employees
+      = f.text_field :number_of_employees
+  = field_set_tag 'Individual Contact' do
+    .field
+      = f.label :contact_name, "Name"
+      = f.text_field :contact_name
+    .field
+      = f.label :contact_role, "Role in organisation"
+      = f.text_field :contact_role
+    .field
+      = f.label :contact_email, "Email"
+      = f.text_field :contact_email
+    .field
+      = f.label :contact_phone, "Phone number"
+      = f.text_field :contact_phone
+
+  = field_set_tag 'Pledge Details' do
+    .field
+      = f.label :number_apprentices, "How many apprentices do you currently employ?"
+      = f.number_field :number_apprentices
+    .field
+      = f.label :proportion, "What proportion of your workforce does this equate to?"
+      = f.text_field :proportion
+    .field
+      = f.label :future_number_apprentices, "How many apprentices will you aim to employ over the next 12 months?"
+      = f.number_field :future_number_apprentices
+    .field
+      = f.label :future_proportion, "What proportion of your workforce will you aim to be apprentices in 12 months’ time?"
+      = f.text_field :future_proportion
+    .field
+      = f.label :work_experience
+      = f.number_field :work_experience
+    .field
+      = f.label :future_work_experience
+      = f.number_field :future_work_experience
+    .field
+      = f.label :enterprise_adviser
+      = f.number_field :enterprise_adviser
+  = field_set_tag 'Summary' do
+    .field
+      = f.label :terms do
+        = f.check_box :terms
+        %span Please confirm that no data provided is considered sensitive and that you have read and agree to the data provided being used as described.
+    .actions
+      = f.submit 'Save'

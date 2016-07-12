@@ -1,0 +1,57 @@
+%h1 Listing employer_forms
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Address one
+      %th Address two
+      %th City
+      %th County
+      %th Postcode
+      %th Sector
+      %th Number of employees
+      %th Contact name
+      %th Contact role
+      %th Contact email
+      %th Contact phone
+      %th Number apprentices
+      %th Future number apprentices
+      %th Proportion
+      %th Future proportion
+      %th Work experience
+      %th Future work experience
+      %th Enterprise adviser
+      %th
+      %th
+      %th
+
+  %tbody
+    - @employer_forms.each do |employer_form|
+      %tr
+        %td= employer_form.name
+        %td= employer_form.address_one
+        %td= employer_form.address_two
+        %td= employer_form.city
+        %td= employer_form.county
+        %td= employer_form.postcode
+        %td= employer_form.sector
+        %td= employer_form.number_of_employees
+        %td= employer_form.contact_name
+        %td= employer_form.contact_role
+        %td= employer_form.contact_email
+        %td= employer_form.contact_phone
+        %td= employer_form.number_apprentices
+        %td= employer_form.future_number_apprentices
+        %td= employer_form.proportion
+        %td= employer_form.future_proportion
+        %td= employer_form.work_experience
+        %td= employer_form.future_work_experience
+        %td= employer_form.enterprise_adviser
+        %td= link_to 'Show', employer_form
+        %td= link_to 'Edit', edit_employer_form_path(employer_form)
+        %td= link_to 'Destroy', employer_form, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Employer form', new_employer_form_path

@@ -1,0 +1,64 @@
+body
+  font-family: "Proxima Nova", "proxima-nova", Sans-Serif
+  font-size: 0.875rem
+
+a
+  color: $primary
+  text-decoration: none
+  a:hover
+    text-decoration: underline
+img
+  max-width: 100%
+
+input[type=radio][data-tab]
+  display: none
+
+input[type=radio][data-tab]:not(:checked)+div
+  display: none
+div#tab_head
+  background-color: #2E2F30
+  padding: 15px
+  label
+    opacity: 1
+    color: #ddd
+    margin-right: 20px
+    cursor: pointer
+    &.tab_selected
+      color: white
+#tab_content_container
+  background-color: white
+  border: 1px solid #ddd
+  padding: 30px
+  box-sizing: border-box
+
+.field_with_errors
+  input
+    border: 1px solid $primary!important
+
+#on_site_admin_bar
+  background-color: $primary
+  a
+    display: inline-block
+    padding: 0 20px
+    color: white
+    font-weight: 600
+    font-size: 0.75rem
+    text-align: center
+    line-height: 40px
+    text-decoration: none
+    text-transform: uppercase
+    border-right: 1px solid rgba(255, 255, 255, 0.25)
+    transition: background-color 0.1s
+    &:first-child
+      border-left: 1px solid rgba(255, 255, 255, 0.26)
+    &:hover
+      background-color: red
+    &.admin_bar_edit_link
+      float: right
+      border-left: 1px solid rgba(255, 255, 255, 0.25)
+
+.hidden
+  display: none
+
+td.no_wrap
+  white-space: nowrap

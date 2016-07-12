@@ -1,0 +1,74 @@
+.header_top
+  .container
+    .logo
+      %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk", :style => "outline: none;", :title => "Creating jobs for the future"}
+        %img{:alt => "New Anglia LEP for Norfolk and Suffolk", :border => "0", :src => "http://www.newanglia.co.uk/wp-content/uploads/2013/10/new-anglia-website-logo.gif"}/
+    / / .logo
+    %nav#topmenu.menu-main-menu-container
+      %ul#menu-main-menu.dropdown
+        %li#menu-item-11706.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11706.first
+          %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/our-priorities/", :style => "outline: none;"}
+            %span Our Priorities
+        %li#menu-item-11739.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-has-children.menu-item-11739.parent
+          %a{:hidefocus => "true", :href => "#", :style => "outline: none;"}
+            %span Our Programmes
+          %ul.submenu-1{:style => "left: -18px; display: none;"}
+            %li#menu-item-11927.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11927.first
+              %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/transport/", :style => "outline: none;"}
+                %span Transport
+            %li#menu-item-11741.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11741
+              %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/skills/", :style => "outline: none;"}
+                %span Skills
+            %li#menu-item-11931.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11931
+              %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/broadband-campaign/", :style => "outline: none;"}
+                %span Broadband
+            %li#menu-item-11747.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11747
+              %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/europe/", :style => "outline: none;"}
+                %span Europe
+            %li#menu-item-11893.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11893
+              %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/community-challenge-fund/", :style => "outline: none;"}
+                %span Community Challenge Fund
+            %li#menu-item-11742.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11742.last
+              %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/green-economy/", :style => "outline: none;"}
+                %span Green Economy
+        %li#menu-item-11453.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11453
+          %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/business-support/", :style => "outline: none;"}
+            %span Business Support
+        %li#menu-item-11428.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-has-children.menu-item-11428.parent
+          %a{:hidefocus => "true", :href => "#", :style => "outline: none;"}
+            %span Media Centre
+          %ul.submenu-1{:style => "left: -31.5px;"}
+            %li#menu-item-5441.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-5441.first
+              %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/blog/", :style => "outline: none;"}
+                %span News and Press Releases
+            %li#menu-item-11431.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11431
+              %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/e-newsletters/", :style => "outline: none;"}
+                %span e-newsletters
+            %li#menu-item-11432.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11432.last
+              %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/publications/", :style => "outline: none;"}
+                %span Publications
+        %li#menu-item-5411.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-5411.last
+          %a{:hidefocus => "true", :href => "http://www.newanglia.co.uk/about-us/", :style => "outline: none;"}
+            %span About Us
+    #topmenu-select
+      %select#topm-select.select_styled
+        %option{:value => "http://www.newanglia.co.uk/our-priorities/"} Our Priorities
+        %option{:disabled => "disabled", :value => "#"} Our Programmes
+        %option{:value => "http://www.newanglia.co.uk/transport/"}  |-- Transport
+        %option{:value => "http://www.newanglia.co.uk/skills/"}  |-- Skills
+        %option{:value => "http://www.newanglia.co.uk/broadband-campaign/"}  |-- Broadband
+        %option{:value => "http://www.newanglia.co.uk/europe/"}  |-- Europe
+        %option{:value => "http://www.newanglia.co.uk/community-challenge-fund/"}  |-- Community Challenge Fund
+        %option{:value => "http://www.newanglia.co.uk/green-economy/"}  |-- Green Economy
+        %option{:value => "http://www.newanglia.co.uk/business-support/"} Business Support
+        %option{:disabled => "disabled", :value => "#"} Media Centre
+        %option{:value => "http://www.newanglia.co.uk/blog/"}  |-- News and Press Releases
+        %option{:value => "http://www.newanglia.co.uk/e-newsletters/"}  |-- e-newsletters
+        %option{:value => "http://www.newanglia.co.uk/publications/"}  |-- Publications
+        %option{:value => "http://www.newanglia.co.uk/about-us/"} About Us
+    .topsearch
+      %form#searchForm{:action => "http://www.newanglia.co.uk/", :method => "get"}
+        %input#s.stext{:name => "s", :type => "text", :value => ""}/
+        %input#searchSubmit.btn-search{:type => "submit", :value => "Search"}/
+    .clear
+      / / container
