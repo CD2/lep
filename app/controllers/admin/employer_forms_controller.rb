@@ -1,5 +1,5 @@
 class Admin::EmployerFormsController < ApplicationController
-  
+
   layout 'admin_layout'
 
   before_action :set_employer_form, only: [:show, :destroy]

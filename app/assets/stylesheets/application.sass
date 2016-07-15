@@ -12,6 +12,42 @@
   margin: 0 auto
   .panel
     width: 100%
+  table
+    width: 100%
+    margin-bottom: 20px
+    background-color: white
+    &.order_items
+      margin-bottom: 0
+    th a
+      color: white
+      text-decoration: underline
+    thead tr
+      background-color: #444
+      color: white
+    tr:nth-child(even)
+      background-color: #e6e6e6
+    tbody tr:hover
+      background-color: #ddd
+    th, td
+      padding: 10px
+      text-align: left
+
+    td.action_links
+      width: 1px
+      white-space: nowrap
+    &.order_totals_table
+      max-width: 300px
+      margin-left: auto
+      tr
+        background-color: white
+      td:first-child
+        text-align: right
+      td:last-child
+        padding-left: 30px
+      .order_total_row
+        font-size: 1.125rem
+  img
+    width: 400px
 
 input[type="text"], input[type="password"], input[type="email"], select
   height: 50px
@@ -41,6 +77,7 @@ h2
   font-size: 1.125rem
 
 .actions
+  margin-bottom: 70px
   a
     background-color: $primary
     color: white
