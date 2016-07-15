@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'carrierwave'
 gem 'haml-rails'
 
+gem 'rails_12factor'
+
 gem 'bcrypt'
 gem 'friendly_id'
 
