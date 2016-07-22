@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 
 gem 'carrierwave'
+gem 'fog'
 gem 'haml-rails'
 
 gem 'rails_12factor'
@@ -23,6 +24,9 @@ gem 'bcrypt'
 gem 'friendly_id'
 
 gem 'faker'
+
+gem 'devise'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri

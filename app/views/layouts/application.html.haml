@@ -12,5 +12,8 @@
         %h1 Welcome to the Youth Pledge Marque Application Website
         %h2 Please complete the following fields and click the submit application box when complete.
     #page_wrapper
+      %p.notice= notice
+      %p.alert= alert
+
       = yield
     = render 'footer'
