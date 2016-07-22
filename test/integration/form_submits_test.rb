@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class FormSubmitsTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
 
   test 'form submits and creates cirrect data' do
     get '/'
@@ -40,11 +41,11 @@ class FormSubmitsTest < ActionDispatch::IntegrationTest
 
     get '/admin/employer_forms'
     assert_response 302
-    login(users(:admin))
-    get '/admin/grant_details'
+    sign_in User.first
+    get '/admin/employer_forms'
     assert_response 200
 
-    assert_select 'td', text: user_params[:email]
+    assert_select 'td', text: 'uniquie@email.com'
   end
 
 end
