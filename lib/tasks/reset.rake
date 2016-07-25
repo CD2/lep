@@ -12,4 +12,6 @@ task seed: :environment do
   Rake::Task['seed_pages'].invoke
   Rake::Task['sample_data'].invoke
 
+  User.create!(name: 'CD2', email: 'web@cd2solutions.co.uk', password: 'pass123')
+
 end

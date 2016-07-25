@@ -1,4 +1,8 @@
-%header#header
-  #header_inner
-    - if content_for? :title
-      %h1= yield :title
+#admin_header
+  #admin_links
+    = link_to 'Front Site', root_url
+    = link_to 'Employer Forms', admin_employer_forms_url
+    = link_to 'Users', admin_users_url
+
+
+    = link_to 'logout', destroy_user_session_path
