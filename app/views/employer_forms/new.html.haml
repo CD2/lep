@@ -74,17 +74,17 @@
         .inline_fields
           .field{data: {required: true}}
             = f.label :number_apprentices, "How many apprentices do you currently employ?"
-            = f.number_field :number_apprentices
+            = f.text_field :number_apprentices
           .field{data: {required: true}}
-            = f.label :proportion, "What proportion of your workforce does this equate to?"
+            = f.label :proportion, "What percentage of your workforce does this equate to?"
             = f.text_field :proportion
         .inline_fields
           .field{data: {required: true}}
             = f.label :future_number_apprentices, "How many apprentices will you aim to employ over the next 12 months?"
-            = f.number_field :future_number_apprentices
+            = f.text_field :future_number_apprentices, placeholder: '%'
           .field{data: {required: true}}
-            = f.label :future_proportion, "What proportion of your workforce will you aim to be apprentices in 12 months’ time?"
-            = f.text_field :future_proportion
+            = f.label :future_proportion, "What percentage of your workforce will you aim to be apprentices in 12 months’ time?"
+            = f.text_field :future_proportion, placeholder: '%'
     .split_form_area.odd
       .description
         %h3 Work Experience
@@ -97,10 +97,10 @@
       .main
         .field{data: {required: true}}
           = f.label :work_experience, 'How many work experience placements have you offered over the past 12 months'
-          = f.number_field :work_experience
+          = f.text_field :work_experience
         .field{data: {required: true}}
           = f.label :future_work_experience, 'How many work experience placements do you aim to offer in the next 12 months'
-          = f.number_field :future_work_experience
+          = f.text_field :future_work_experience
     .split_form_area.odd
       .description
         %h3 Enterprise Adviser
@@ -108,7 +108,7 @@
       .main
         .field{data: {required: true}}
           = f.label :enterprise_adviser, 'How many of your employees are currently working with schools as an Enterprise Adviser'
-          = f.number_field :enterprise_adviser
+          = f.text_field :enterprise_adviser
     .actions
       = link_to 'Next >', 'javascript: void 0;', data: {next_panel: true}
   .panel
