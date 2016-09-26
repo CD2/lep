@@ -1,0 +1,38 @@
+= form_for [:admin, @user], html: {class: 'admin_form'} do |f|
+  %h2 Edit Details
+
+  - if @user.errors.any?
+    .errors_container
+      - @user.errors.messages.except(:password, :password_confirmation).each do |m|
+        = "#{m.first.to_s.humanize} #{m[1][0]}"
+
+  .field
+    = f.label :name
+    = f.text_field :name
+
+  .field
+    = f.label :email
+    = f.text_field :email
+  
+  .actions
+    = f.submit 'Save'
+
+= form_for [:admin, @user], url: update_password_admin_user_path(@user), html: {class: 'admin_form'} do |f|
+  %h2 Edit Password
+  
+  - if @user.errors.any?
+    .errors_container
+      - @user.errors.messages.slice(:password, :password_confirmation).each do |m|
+        .error
+          = "#{m.first.to_s.humanize} #{m[1][0]}"
+
+  .field
+    = f.label :password
+    = f.password_field :password
+
+  .field
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
+
+  .actions
+    = f.submit 'Update Password'

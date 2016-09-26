@@ -14,7 +14,7 @@
         %p Please enter the details of your organisation
       .main
         .field{data: {required: true}}
-          = f.label :name
+          = f.label :name, 'Organisation Name'
           = f.text_field :name
         .field{data: {required: true}}
           = f.label :address_one
@@ -81,7 +81,7 @@
         .inline_fields
           .field{data: {required: true}}
             = f.label :future_number_apprentices, "How many apprentices will you aim to employ over the next 12 months?"
-            = f.text_field :future_number_apprentices, placeholder: '%'
+            = f.text_field :future_number_apprentices
           .field{data: {required: true}}
             = f.label :future_proportion, "What percentage of your workforce will you aim to be apprentices in 12 months’ time?"
             = f.text_field :future_proportion, placeholder: '%'
@@ -115,7 +115,7 @@
     .split_form_area.odd
       .description
         %h3 Summary
-        %p The information provided above will be collected, stored and used for the purposes of administering and promoting the New Anglia Youth Pledge by the following organisations:
+        %p The information provided will be collected, stored and used for the purposes of administering and promoting the New Anglia Youth Pledge by the following organisations:
         %ul
           %li Department of Work and Pensions
           %li New Anglia Local Enterprise Partnership
