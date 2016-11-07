@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20160722161520) do
     t.string   "city"
     t.string   "county"
     t.string   "postcode"
+    t.string   "organisation_type"
     t.string   "sector"
     t.integer  "number_of_employees"
     t.string   "contact_name"

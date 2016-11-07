@@ -39,6 +39,8 @@ $(function(){
     return valid && $('.current_panel').length == 0
   }
 
+
+
   function validate_panel($panel) {
     var errors_found = false;
 
@@ -66,6 +68,14 @@ $(function(){
   function hasNextPanel() {
     return !$('.panel').last().hasClass('current_panel');
   }
+
+    $('[data-prev-panel]').on('click', function(){
+        $prev = $('.current_panel').prev('.panel')
+        if ($prev.length > 0) {
+            $('.current_panel').removeClass('current_panel')
+            $prev.addClass('current_panel')
+        }
+    });
 
 
 });

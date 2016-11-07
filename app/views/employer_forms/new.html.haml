@@ -10,6 +10,7 @@
 
     .split_form_area
       .description
+        %span.pageno Page 1 of 4
         %h3 Organisation Details
         %p Please enter the details of your organisation
       .main
@@ -33,15 +34,19 @@
           = f.text_field :postcode
         .field{data: {required: true}}
           = f.label :sector
-          = f.text_field :sector
+          = f.select :sector, EmployerForm.employment_sector.map{|k, v| [k , k]}, prompt: '-- Select --'
         .field{data: {required: true}}
-          = f.label :number_of_employees
+          = f.label :organisation_type
+          = f.select :organisation_type, EmployerForm.organisation_type.map{|k, v| [k , k]}, prompt: '-- Select --'
+        .field{data: {required: true}}
+          = f.label :number_of_employees, 'Number of employees working in Norfolk & Suffolk'
           = f.text_field :number_of_employees
     .actions
       = link_to 'Next >', 'javascript: void 0;', data: {next_panel: true}
   .panel
     .split_form_area
       .description
+        %span.pageno Page 2 of 4
         %h3 Individual Contact Information
         %p Please enter your contact information
       .main
@@ -59,12 +64,15 @@
           = f.text_field :contact_phone
     .actions
       = link_to 'Next >', 'javascript: void 0;', data: {next_panel: true}
+      = link_to '< Back', 'javascript: void 0;', data: {prev_panel: true}, class: 'no_js_hidden'
   .panel
+
     %h2 Pledge Details
     %p (organisations can make a pledge in one or more of the following categories)
 
     .split_form_area
       .description
+        %span.pageno Page 3 of 4
         %h3 Apprenticeships
         %p The Marque will be offered to those organisations either
         %ul
@@ -111,13 +119,15 @@
           = f.text_field :enterprise_adviser
     .actions
       = link_to 'Next >', 'javascript: void 0;', data: {next_panel: true}
+      = link_to '< Back', 'javascript: void 0;', data: {prev_panel: true}, class: 'no_js_hidden'
   .panel
     .split_form_area.odd
       .description
+        %span.pageno Page 4 of 4
         %h3 Summary
         %p The information provided above will be collected, stored and used for the purposes of administering and promoting the New Anglia Youth Pledge by the following organisations:
         %ul
-          %li Department of Work and Pensions
+          %li Department for Work and Pensions
           %li New Anglia Local Enterprise Partnership
           %li Suffolk County Council
           %li Norfolk County Council
@@ -135,4 +145,5 @@
             %span Please confirm that no data provided is considered sensitive and that you have read and agree to the data provided being used as described.
 
     .actions
+      = link_to '< Back', 'javascript: void 0;', data: {prev_panel: true}, class: 'no_js_hidden'
       = f.submit 'Save'

@@ -7,6 +7,7 @@ class CreateEmployerForms < ActiveRecord::Migration[5.0]
       t.string :city
       t.string :county
       t.string :postcode
+      t.string :organisation_type
       t.string :sector
       t.integer :number_of_employees
       t.string :contact_name
