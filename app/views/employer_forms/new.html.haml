@@ -68,7 +68,7 @@
   .panel
 
     %h2 Pledge Details
-    %p (organisations can make a pledge in one or more of the following categories)
+    %p (organisations can make a pledge in one or more of the following categories. Please just insert ‘0’ for any fields you are not making a pledge in)
 
     .split_form_area
       .description
@@ -136,7 +136,8 @@
       .main
         %p Details of the pledge the organisation is making will be made publically available on the New Anglia LEP website.
         %p Data will only be processed to the extent and in such a manner as is necessary for the delivery of the project or as required by law or any regulatory body.
-        .field.margin{data: {required: true}}
+        %p We would like to include your logo on the Pledge Marque website. If you do not provide a logo your organisation name will simply be used instead.
+        .field.margin
           = f.label :logo
           = f.file_field :logo
         .field.margin{data: {required: true}}

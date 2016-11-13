@@ -6,7 +6,7 @@ class EmployerForm < ApplicationRecord
 
   def self.organisation_type
     [
-        'Limited Company', 'Charity', 'Social Enterprise', 'Public Sector'
+        'Limited Company', 'Charity', 'Social Enterprise', 'Public Sector', 'Other'
     ]
   end
 
