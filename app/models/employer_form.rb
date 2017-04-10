@@ -30,4 +30,18 @@ class EmployerForm < ApplicationRecord
     ]
   end
 
+  require 'csv'
+  def self.to_csv
+    # columns = EmployerForm.columns.map{|c| c.name, c.contact_email, c.created_at}
+    columns = %w(name contact_email created_at)
+    CSV.generate(headers: true) do |csv|
+      csv << [''] + columns.map(&:titleize)
+
+      all.each_with_index do |emp, i|
+        csv << [i+1] + columns.map{ |attr| emp.send(attr) }
+      end
+    end
+
+  end
+
 end
