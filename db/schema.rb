@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722161520) do
+ActiveRecord::Schema.define(version: 20190107093351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,21 +24,18 @@ ActiveRecord::Schema.define(version: 20160722161520) do
     t.string   "postcode"
     t.string   "organisation_type"
     t.string   "sector"
-    t.integer  "number_of_employees"
     t.string   "contact_name"
     t.string   "contact_role"
     t.string   "contact_email"
     t.string   "contact_phone"
-    t.integer  "number_apprentices"
-    t.integer  "future_number_apprentices"
-    t.string   "proportion"
-    t.string   "future_proportion"
-    t.integer  "work_experience"
-    t.integer  "future_work_experience"
-    t.integer  "enterprise_adviser"
     t.string   "logo"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.boolean  "pledge_type_apprenticeships"
+    t.boolean  "pledge_type_work_inspiration"
+    t.boolean  "pledge_type_work_placements"
+    t.boolean  "pledge_type_SEND_support"
+    t.string   "pledge_type_other_information"
   end
 
   create_table "users", force: :cascade do |t|

@@ -4,6 +4,6 @@ class AddFieldsToEmployerForms < ActiveRecord::Migration[5.0]
     add_column :employer_forms, :pledge_type_work_inspiration, :boolean
     add_column :employer_forms, :pledge_type_work_placements, :boolean
     add_column :employer_forms, :pledge_type_SEND_support, :boolean
-    add_column :employer_forms, :pledge_type_other, :string
+    add_column :employer_forms, :pledge_type_other_information, :string
   end
 end
