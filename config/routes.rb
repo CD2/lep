@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-
-
   devise_for :users
-  
+
   namespace :admin do
-    root :to => redirect('/admin/employer_forms')
+    root to: redirect('/admin/employer_forms')
     resources :employer_forms, only: [:index, :show, :destroy]
     resources :users, except: [:show] do
       patch :update_password, on: :member
@@ -15,6 +13,5 @@ Rails.application.routes.draw do
   post 'employer_forms', to: 'employer_forms#create', as: :employer_forms
   get 'submitted', to: 'employer_forms#submitted', as: :submitted
   root 'employer_forms#new'
-
-
+  
 end

@@ -10,7 +10,6 @@ class Admin::EmployerFormsController < ApplicationController
     @xlsx_head = EmployerForm.xlsx_head
     respond_to do |format|
       format.html
-      # format.csv { send_data EmployerForm.to_csv, filename: "Youth-Pledge-Applications-#{Date.today}.csv" }
       format.xlsx { filename =  "Youth-Pledge-Applications-#{Date.today}.xlsx" }
     end
   end

@@ -38,6 +38,11 @@ class EmployerForm < ApplicationRecord
     county
     postcode
     sector
+    pledge_type_apprenticeships
+    pledge_type_work_inspiration
+    pledge_type_work_placements
+    pledge_type_SEND_support
+    pledge_type_other_information
     contact_name
     contact_role
     contact_email
