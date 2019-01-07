@@ -16,7 +16,7 @@ task sample_data: :environment do
       contact_role: Faker::Company.profession,
       contact_email: Faker::Internet.email,
       contact_phone: Faker::PhoneNumber.phone_number,
-      logo: Faker::Company.logo,
+      # logo: Faker::Company.logo,
       pledge_type_apprenticeships: i % 2 != 0,
       pledge_type_work_inspiration: i % 2 == 0 ,
       pledge_type_work_placements: i % 2 != 0 ,
