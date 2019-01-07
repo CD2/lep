@@ -12,17 +12,16 @@ task sample_data: :environment do
       county: Faker::Address.state,
       postcode: Faker::Address.postcode,
       sector: Faker::Company.profession,
-      number_of_employees: Faker::Number.between(5, 100),
       contact_name: Faker::Name.name,
       contact_role: Faker::Company.profession,
       contact_email: Faker::Internet.email,
       contact_phone: Faker::PhoneNumber.phone_number,
-      number_apprentices: Faker::Number.between(0,10),
-      future_number_apprentices: Faker::Number.between(5,20),
-      work_experience: Faker::Number.between(0,10),
-      future_work_experience: Faker::Number.between(10,30),
-      enterprise_adviser: Faker::Number.between(4,15),
-      logo: Faker::Company.logo
+      logo: Faker::Company.logo,
+      pledge_type_apprenticeships: i % 2 != 0,
+      pledge_type_work_inspiration: i % 2 == 0 ,
+      pledge_type_work_placements: i % 2 != 0 ,
+      pledge_type_SEND_support: i % 2 == 0,
+      pledge_type_other_information: Faker::Lorem.sentence
     })
 
   end
