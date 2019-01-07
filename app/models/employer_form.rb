@@ -38,18 +38,10 @@ class EmployerForm < ApplicationRecord
     county
     postcode
     sector
-    number_of_employees
     contact_name
     contact_role
     contact_email
     contact_phone
-    number_apprentices
-    future_number_apprentices
-    proportion
-    future_proportion
-    work_experience
-    future_work_experience
-    enterprise_adviser
     created_at
   ]
 

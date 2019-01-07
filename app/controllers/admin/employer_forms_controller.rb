@@ -23,8 +23,7 @@ class Admin::EmployerFormsController < ApplicationController
     redirect_to admin_employer_forms_path
   end
 
-
-private
+  private
 
   def set_employer_form
     @employer_form = EmployerForm.find(params[:id])
