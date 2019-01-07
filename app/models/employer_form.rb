@@ -55,7 +55,9 @@ class EmployerForm < ApplicationRecord
   end
   
   def to_xlsx_row
-    XLSX_COLUMNS.map{ |column| send(column) }
+    XLSX_COLUMNS.map do |column| 
+      column == 'created_at' ? created_at.strftime("%d/%m/%Y %I:%M%p") : send(column)
+    end
   end
 
 end
