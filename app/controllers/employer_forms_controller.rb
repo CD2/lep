@@ -11,7 +11,7 @@ class EmployerFormsController < ApplicationController
 
   def create
     @employer_form = EmployerForm.new(employer_form_params)
-    if @employer_form.save
+    if verify_recaptcha(model: @employer_form) && @employer_form.save
       redirect_to submitted_url, notice: 'Employer form was successfully created.'
     else
       render :new
