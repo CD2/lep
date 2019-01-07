@@ -10,7 +10,9 @@ class Admin::EmployerFormsController < ApplicationController
     @xlsx_head = EmployerForm.xlsx_head
     respond_to do |format|
       format.html
-      format.xlsx { filename =  "Youth-Pledge-Applications-#{Date.today}.xlsx" }
+      format.xlsx { 
+        response.headers['Content-Disposition'] = "attachment; filename='Youth-Pledge-Applications-#{Date.today}.xlsx'"
+      }
     end
   end
 
