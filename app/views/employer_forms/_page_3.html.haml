@@ -1,55 +1,30 @@
 .panel
 
-  %h2 Pledge Details
-  %p (organisations can make a pledge in one or more of the following categories. Please just insert ‘0’ for any fields you are not making a pledge in)
-
   .split_form_area
     .description
       %span.pageno Page 3 of 4
-      %h3 Apprenticeships
-      %p The Marque will be offered to those organisations either
-      %ul
-        %li looking to increase the amount of apprentices in their organisations, or
-        %li those organisations with 2% or more of their workforce made up of apprentices
-    .main
-      .inline_fields
-        .field{data: {required: true}}
-          = f.label :number_apprentices, "How many apprentices do you currently employ?"
-          = f.text_field :number_apprentices
-        .field{data: {required: true}}
-          = f.label :proportion, "What percentage of your workforce does this equate to?"
-          = f.text_field :proportion
-      .inline_fields
-        .field{data: {required: true}}
-          = f.label :future_number_apprentices, "How many apprentices will you aim to employ over the next 12 months?"
-          = f.text_field :future_number_apprentices
-        .field{data: {required: true}}
-          = f.label :future_proportion, "What percentage of your workforce will you aim to be apprentices in 12 months’ time?"
-          = f.text_field :future_proportion, placeholder: '%'
-  .split_form_area.odd
-    .description
-      %h3 Work Experience
-      %p The Marque will be offered to those organisations either
 
-      %ul
-        %li Increasing the amount of work experience placements they offer on a yearly basis, or
+    .main
+      %label What are you doing to support the Youth Pledge? (Please tick)
+      .inline_fields
+        .field{data: {required: false}}
+          = f.label :pledge_type_apprenticeships, "Apprenticeships"
+          = f.check_box :pledge_type_apprenticeships
+        .field{data: {required: false}}
+          = f.label :pledge_type_work_inspiration, "Work Inspiration"
+          = f.check_box :pledge_type_work_inspiration
+      .inline_fields
+        .field{data: {required: false}}
+          = f.label :pledge_type_work_placements, "Work Placements"
+          = f.check_box :pledge_type_work_placements
+        .field{data: {required: false}}
+          = f.label :pledge_type_SEND_support, "SEND Support"
+          = f.check_box :pledge_type_SEND_support
+      .inline_fields
+        .field{data: {required: false}}
+          = f.label :pledge_type_other_information, "Tell us what else you are doing"
+          = f.text_field :pledge_type_other_information
 
-        %li providing at least 1 work experience placement per 25 employees
-    .main
-      .field{data: {required: true}}
-        = f.label :work_experience, 'How many work experience placements have you offered over the past 12 months'
-        = f.text_field :work_experience
-      .field{data: {required: true}}
-        = f.label :future_work_experience, 'How many work experience placements do you aim to offer in the next 12 months'
-        = f.text_field :future_work_experience
-  .split_form_area.odd
-    .description
-      %h3 Enterprise Adviser
-      %p The Marque will be offered to any organisation with an employee enrolled as an active Enterprise Adviser.
-    .main
-      .field{data: {required: true}}
-        = f.label :enterprise_adviser, 'How many of your employees are currently working with schools as an Enterprise Adviser'
-        = f.text_field :enterprise_adviser
   .actions
     = link_to 'Next >', 'javascript: void 0;', data: {next_panel: true}
     = link_to '< Back', 'javascript: void 0;', data: {prev_panel: true}, class: 'no_js_hidden'

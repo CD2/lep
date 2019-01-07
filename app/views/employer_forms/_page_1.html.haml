@@ -30,8 +30,6 @@
       .field{data: {required: true}}
         = f.label :organisation_type
         = f.select :organisation_type, EmployerForm.organisation_type.map{|k, v| [k , k]}, prompt: '-- Select --'
-      .field{data: {required: true}}
-        = f.label :number_of_employees, 'Number of employees working in Norfolk & Suffolk'
-        = f.text_field :number_of_employees
+
   .actions
     = link_to 'Next >', 'javascript: void 0;', data: {next_panel: true}
