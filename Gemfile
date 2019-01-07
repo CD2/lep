@@ -26,15 +26,15 @@ gem 'friendly_id'
 gem 'faker'
 
 gem 'devise'
+gem 'recaptcha'
 
 # rando gems for XLSX export
-
 gem 'rubyzip', '>= 1.2.1'
 gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
 gem 'axlsx_rails'
 
-
 group :development, :test do
+  gem 'figaro'
   gem 'byebug', platform: :mri
   gem 'better_errors'
   gem 'binding_of_caller'
