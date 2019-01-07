@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
   devise_for :users
+  
   namespace :admin do
     root :to => redirect('/admin/employer_forms')
     resources :employer_forms, only: [:index, :show, :destroy]

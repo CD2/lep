@@ -1,0 +1,8 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "YP-Applications-#{Date.today}") do |sheet|
+  sheet.add_row @xlsx_head
+  @employer_forms.each do |employer_form|
+    sheet.add_row employer_form.to_xlsx_row
+  end
+end
