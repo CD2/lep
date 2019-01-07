@@ -1,0 +1,37 @@
+.panel.current_panel
+
+  .split_form_area
+    .description
+      %span.pageno Page 1 of 4
+      %h3 Organisation Details
+      %p Please enter the details of your organisation
+    .main
+      .field{data: {required: true}}
+        = f.label :name, 'Organisation Name'
+        = f.text_field :name
+      .field{data: {required: true}}
+        = f.label :address_one
+        = f.text_field :address_one
+      .field
+        = f.label :address_two
+        = f.text_field :address_two
+      .field{data: {required: true}}
+        = f.label :city
+        = f.text_field :city
+      .field{data: {required: true}}
+        = f.label :county
+        = f.text_field :county
+      .field{data: {required: true}}
+        = f.label :postcode
+        = f.text_field :postcode
+      .field{data: {required: true}}
+        = f.label :sector
+        = f.select :sector, EmployerForm.employment_sector.map{|k, v| [k , k]}, prompt: '-- Select --'
+      .field{data: {required: true}}
+        = f.label :organisation_type
+        = f.select :organisation_type, EmployerForm.organisation_type.map{|k, v| [k , k]}, prompt: '-- Select --'
+      .field{data: {required: true}}
+        = f.label :number_of_employees, 'Number of employees working in Norfolk & Suffolk'
+        = f.text_field :number_of_employees
+  .actions
+    = link_to 'Next >', 'javascript: void 0;', data: {next_panel: true}

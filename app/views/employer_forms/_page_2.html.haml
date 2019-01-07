@@ -1,0 +1,22 @@
+.panel
+  .split_form_area
+    .description
+      %span.pageno Page 2 of 4
+      %h3 Individual Contact Information
+      %p Please enter your contact information
+    .main
+      .field{data: {required: true}}
+        = f.label :contact_name, "Name"
+        = f.text_field :contact_name
+      .field{data: {required: true}}
+        = f.label :contact_role, "Role in organisation"
+        = f.text_field :contact_role
+      .field{data: {required: true}}
+        = f.label :contact_email, "Email"
+        = f.text_field :contact_email
+      .field{data: {required: true}}
+        = f.label :contact_phone, "Phone number"
+        = f.text_field :contact_phone
+  .actions
+    = link_to 'Next >', 'javascript: void 0;', data: {next_panel: true}
+    = link_to '< Back', 'javascript: void 0;', data: {prev_panel: true}, class: 'no_js_hidden'
