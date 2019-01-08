@@ -52,4 +52,4 @@
     %td= @employer_form.contact_phone
   %tr
     %th logo
-    %td= image_tag(@employer_form.logo)
+    %td= @employer_form.logo && @employer_form.logo.url ? image_tag(@employer_form.logo.url) : "No logo uploaded"
