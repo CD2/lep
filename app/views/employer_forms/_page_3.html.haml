@@ -5,6 +5,11 @@
       %span.pageno Page 3 of 4
 
     .main
+      .field{data: {required: true}}
+        = f.label :support_type, "Tell us what you are doing to support young people to experience or enter the world of work?"
+        %p This information will be published and promoted as part of New Anglia Youth Pledge along with your company name and logo
+        = f.text_area :support_type, :maxlength => 250
+
       %label What are you doing to support the Youth Pledge? (Please tick)
       .inline_fields
         .field{data: {required: false}}
@@ -18,12 +23,12 @@
           = f.label :pledge_type_work_placements, "Work Placements"
           = f.check_box :pledge_type_work_placements
         .field{data: {required: false}}
-          = f.label :pledge_type_SEND_support, "SEND Support"
+          = f.label :pledge_type_SEND_support, "Supporting those with special educational needs or disabilities"
           = f.check_box :pledge_type_SEND_support
-      .inline_fields
-        .field{data: {required: false}}
-          = f.label :pledge_type_other_information, "Tell us what else you are doing"
-          = f.text_field :pledge_type_other_information
+
+      .field{data: {required: false}}
+        = f.label :pledge_type_other_information, "Tell us what else you are doing"
+        = f.text_field :pledge_type_other_information
 
   .actions
     = link_to 'Next >', 'javascript: void 0;', data: {next_panel: true}

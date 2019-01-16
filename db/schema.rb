@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190107093351) do
+ActiveRecord::Schema.define(version: 20190116154712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20190107093351) do
     t.boolean  "pledge_type_work_placements"
     t.boolean  "pledge_type_SEND_support"
     t.string   "pledge_type_other_information"
+    t.string   "support_type"
   end
 
   create_table "users", force: :cascade do |t|

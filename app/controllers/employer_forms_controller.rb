@@ -34,6 +34,7 @@ class EmployerFormsController < ApplicationController
         :contact_role,
         :contact_email,
         :contact_phone,
+        :support_type,
         :pledge_type_apprenticeships,
         :pledge_type_work_inspiration,
         :pledge_type_work_placements,
