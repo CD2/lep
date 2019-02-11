@@ -21,7 +21,9 @@
       .field.margin{data: {required: true}}
         = f.label :terms do
           = f.check_box :terms
-          %span Please confirm that no data provided is considered sensitive and that you have read and agree to the data provided being used as described.
+          %span 
+            Please confirm that no information provided is considered personal or sensitive, and that you have read and agree to the New Anglia Local Enterprise Partnership, 
+            = link_to 'Privacy Policy', 'https://newanglia.co.uk/wp-content/uploads/2018/11/New-Anglia-Local-Enterprise-Partnership-Privacy-Policy-09-11-18.pdf'
 
   .actions
     = link_to '< Back', 'javascript: void 0;', data: {prev_panel: true}, class: 'no_js_hidden'
