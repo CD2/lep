@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
 
-  default from: 'skills@newanglia.co.uk'
+  default from: 'info@lep.apprenticeshipsnorfolk.org'
   layout 'mailer'
 end
