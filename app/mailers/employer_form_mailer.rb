@@ -1,10 +1,10 @@
 class EmployerFormMailer < ApplicationMailer
   def sendMail(employerForm)
 
-    @title = 'A new employer form has been submitted'
+    @title = 'A new employer has submitted an application'
     @email = 'skills@newanglia.co.uk'
     @employerForm = employerForm
 
-    mail subject: 'New Employer Form Submission', to: @email
+    mail subject: 'New Employer Application', to: @email
   end
 end
